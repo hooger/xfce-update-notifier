@@ -3,7 +3,7 @@
 # Its intended use is with xfce4-genmon-plugin
 
 size=48
-style=dragon
+style=owl
 notify_time=5000
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
