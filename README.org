@@ -1,0 +1,17 @@
+* XFCE update notifier
+The update notifier is aimed to be used with the XFCE widget: General Monitor. The application displays an icon and a pop up notification message, if there are any updates to the system. The size of the icons on the taskbar, the images to be displayed and the length of the system notifications can all be customized.
+
+** Configuration
+Variables can be set in check.sh the following way:
+- *size* is the used resolution of the image on the taskbar,
+- *style* is the image shown,
+- *notify_time* is the number of milisecond until the pop-up notification is visible.
+
+** Custom icons
+The application uses two base icon sets (dragons and owls) with multiple resolution each. Custom icons can be added to the widget by moving the necessary images to the icons/ folder. The name of the file should look like this:
+#+BEGIN_SRC 
+<style>_[red|green]_<size>.png
+#+END_SRC
+Red icon means the ones displayed when update is necessary, green icons are presented when the system is up-to-date.
+images.svg contains the vector graphics representation of the default icon sets.
+
