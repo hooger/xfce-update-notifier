@@ -2,10 +2,15 @@
 # This script is an update-notifier
 # Its intended use is with xfce4-genmon-plugin
 
+# size of toolbar icon
 size=48
 style=dragon
-notify_time=5000
+
+# notficiation settings
+## notification switch (1=switch on, 0=switch off)
 notification=0
+## linger time of notification
+notify_time=5000
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 lock="$DIR/lock"
