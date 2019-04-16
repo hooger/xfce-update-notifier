@@ -5,6 +5,7 @@
 size=48
 style=dragon
 notify_time=5000
+notification=0
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 lock="$DIR/lock"
@@ -30,7 +31,10 @@ numberofpkgs=0
   else
       echo "<img>$DIR/icons/${style}_red_$size.png</img>"
       echo "<tool>There are $numberofpkgs pending upgrades</tool>"
-      notify-send -t $notify_time -i "$DIR/icons/${style}_red_$size.png" "Update notifier" "There are $numberofpkgs pending upgrades"
+      if [ $notification -eq 1 ]
+      then
+	 notify-send -t $notify_time -i "$DIR/icons/${style}_red_$size.png" "Update notifier" "There are $numberofpkgs pending upgrades"
+      fi
   fi
 
 ) 200> "$lock"
